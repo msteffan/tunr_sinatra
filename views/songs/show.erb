@@ -1,0 +1,11 @@
+<h2><%= @song.title %> <a href="/songs/<%=@song.id%>/edit">(edit)</a></h2>
+
+<h3>By: <%=@song.artist.name%></h3>
+
+<img class="artist-photo" src="<%=@song.artist.photo_url%>" />
+
+<p>
+    Album: <%=@song.album%>
+</p>
+
+<audio controls src="<%=@song.preview_url%>"></audio>

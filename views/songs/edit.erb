@@ -1,0 +1,24 @@
+<h2>Edit <%=@song.title %></h2>
+
+<form action="/songs/<%= @song.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+<label for="song[title]"> Title:</label>
+<input name="song[title]" value="<%=@song.title %>">
+
+<label for="song[album]">Album:</label>
+<input name="song[album]" value="<%=@song.album %>">
+
+<label for="song[preview_url]">preview_url:</label>
+<input name="song[preview_url]" value="<%=@song.preview_url %>">
+
+<label for="song[artist_id]">Artist ID:</label>
+<input name="song[artist_id]" value="<%=@song.artist_id %>">
+
+<input type="submit" value="Update">
+</form>
+
+<form action="/songs/<%= @song.id %>" method="post">
+<input class="button-delete" type="submit" value="Delete!">
+    <input type="hidden" name="_method" value="delete">
+</form>
