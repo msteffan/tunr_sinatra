@@ -4,11 +4,13 @@ require_relative 'connection'
 # models
 require_relative '../models/artist'
 require_relative '../models/song'
+require_relative '../models/playlist'
 
 # data
 require_relative './song_data.rb'
 require_relative './artist_data.rb'
 
+Playlist.destroy_all
 Song.destroy_all
 Artist.destroy_all
 
@@ -31,4 +33,13 @@ song_data.each_pair do |artist_name, songs|
       artist:       current_artist
     })
   end
+end
+
+playlist_names = %w(TunrDownForWhat? WorkoutJamz ScreenMusic)
+
+playlist_names.each do |playlist_name|
+  new_playlist = Playlist.create!({
+    name: playlist_name
+  })
+  new_playlist.songs << Song.all.sample(rand(30))
 end

@@ -17,3 +17,14 @@ CREATE TABLE songs (
     artist_id INTEGER REFERENCES artists(id)
 
 );
+
+
+CREATE TABLE playlists (
+  id SERIAL PRIMARY KEY,
+  name TEXT
+);
+
+CREATE TABLE playlists_songs (
+  song_id INTEGER REFERENCES songs(id),
+  playlist_id INTEGER REFERENCES playlists(id)
+);

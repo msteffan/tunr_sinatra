@@ -8,10 +8,12 @@ require_relative 'db/connection.rb'
 # Load models
 require_relative 'models/artist'
 require_relative 'models/song'
+require_relative 'models/playlist'
 
 # Load specific routes / controllers
 require_relative 'controllers/artists'
 require_relative 'controllers/songs'
+require_relative 'controllers/playlists'
 
 ####################
 #  General routes  #

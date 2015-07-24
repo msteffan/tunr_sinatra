@@ -1,0 +1,10 @@
+<h2>Add a new song</h2>
+
+<form action="/playlists/<%=@playlist.id%>" method="post">
+<input type="hidden" name="_method" value="put">
+
+    <label>Song ID:</label>
+    <input type="text" name="playlists_songs[song_id]">
+
+    <input type="submit" value="Add this song">
+</form>

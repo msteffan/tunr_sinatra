@@ -1,0 +1,12 @@
+<h2> <%= @playlist.name %></h2>
+
+<h3>Songs</h3>
+<ul>
+
+        <% @playlist.songs.each do |song| %>
+    <li>
+        <a href="/songs/<%= song.id %>"><%= song.title %>
+    </li>
+    <% end %>
+    <li><a href="/playlists/<%= @playlist.id%>/add">Add a new song</a></li>
+</ul>
