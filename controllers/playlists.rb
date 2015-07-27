@@ -33,7 +33,5 @@ end
 #show
 get '/playlists/:id' do
     @playlist = Playlist.find(params[:id])
-
     erb :"playlists/show"
-
 end
